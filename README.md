@@ -1,4 +1,4 @@
-##My fellow brothers...
+## My fellow brothers...
 I, Billy Herrington, stand here today, humbled by the task before us, mindful of the sacrifices borne by our Nico Nico ancestors.
 
 We are in the midst of a crisis. Nico Nico Douga is at war against a far-reaching storm of disturbance and deletion. Nico Nico's economy is badly weakened: a consequence of carelessness and irresponsibility on the part of acknowledgement, but also on the collective failure to make hard choices and to prepare for a new, MAD age.
@@ -15,4 +15,4 @@ What is required of us now is a new era of responsibility. This is the price, an
 
 Let it be said by our children's children, that when we were tested by DOS attacks, when we were refused by YouTube, that we did not turn back, nor did we falter, and we carried forth that great gift of freedom be delivered, and safely to future generations.
 
-Thank you. God bless, and God bless Nico Nico Douga.
+*Thank you. God bless, and God bless Nico Nico Douga.*
