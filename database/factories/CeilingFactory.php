@@ -11,7 +11,8 @@ class CeilingFactory extends Factory
     public function definition()
     {
         return [
-
+            'material_count' => $this->faker->numberBetween(1, 100),
+            'material_type' => $this->faker->word(),
         ];
     }
 }

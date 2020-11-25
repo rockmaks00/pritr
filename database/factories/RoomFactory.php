@@ -22,7 +22,11 @@ class RoomFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'project_id' => (new ProjectFactory())->createOne()->id,
+            'name' => $this->faker->word(),
+            'floor_id' => (new FloorFactory())->createOne()->id,
+            'wall_id' => (new WallFactory())->createOne()->id,
+            'ceiling_id' => (new CeilingFactory())->createOne()->id,
         ];
     }
 }

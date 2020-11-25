@@ -22,7 +22,11 @@ class WallFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'plaster_weight' => $this->faker->numberBetween(1, 100),
+            'primer_amount' => $this->faker->numberBetween(1, 100),
+            'material_count' => $this->faker->numberBetween(1, 100),
+            'glue_amount' => $this->faker->numberBetween(1, 100),
+            'material_type' => $this->faker->word(),
         ];
     }
 }

@@ -22,10 +22,10 @@ class FloorFactory extends Factory
     public function definition()
     {
         return [
-            'screed_mix_volume' => 1,
-            'material_count' => 1,
-            'glue_amount' => 1,
-            'material_type' => "ass",
+            'screed_mix_volume' => $this->faker->numberBetween(1, 100),
+            'material_count' => $this->faker->numberBetween(1, 100),
+            'glue_amount' => $this->faker->numberBetween(1, 100),
+            'material_type' => $this->faker->word(),
         ];
     }
 }

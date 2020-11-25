@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Floor;
 use Illuminate\Database\Seeder;
 
 class FloorTableSeeder extends Seeder
@@ -14,8 +13,6 @@ class FloorTableSeeder extends Seeder
      */
     public function run()
     {
-        Floor::factory()
-            ->count(10)
-            ->create();
+
     }
 }
