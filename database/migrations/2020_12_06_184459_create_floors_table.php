@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCeilingsTable extends Migration
+class CreateFloorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateCeilingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ceilings', function (Blueprint $table) {
-            $table->id();
+        Schema::create('floors', function (Blueprint $table) {
+            $table->integer('id')->autoIncrement();
+            $table->double('screed_mix_volume');
             $table->double('material_count');
-            $table->string('material_type');
+            $table->double('glue_amount');
+            $table->integer('material_type');
+            $table->foreign('material_type')->references('id')->on('materials');
         });
     }
 
@@ -27,6 +30,6 @@ class CreateCeilingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ceilings');
+        Schema::dropIfExists('floors');
     }
 }

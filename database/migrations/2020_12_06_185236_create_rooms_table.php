@@ -14,12 +14,17 @@ class CreateRoomsTable extends Migration
     public function up()
     {
         Schema::create('rooms', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id')->autoIncrement();
             $table->integer('project_id');
+            $table->foreign('project_id')->references('id')->on('projects');
             $table->string('name');
-            $table->integer('floor_id')->unique();
-            $table->integer('wall_id')->unique();
-            $table->integer('ceiling_id')->unique();
+            $table->foreign('name')->references('name')->on('projects');
+            $table->integer('floor_id');
+            $table->foreign('floor_id')->references('id')->on('floors');
+            $table->integer('wall_id');
+            $table->foreign('wall_id')->references('id')->on('walls');
+            $table->integer('ceiling_id');
+            $table->foreign('ceiling_id')->references('id')->on('ceilings');
         });
     }
 
