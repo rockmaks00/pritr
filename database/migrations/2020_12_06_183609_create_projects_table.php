@@ -17,9 +17,7 @@ class CreateProjectsTable extends Migration
             $table->integer('id')->autoIncrement();
             $table->integer('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('name');
-            $table->foreign('name')->references('name')->on('users');
-
+            $table->string('project_name');
         });
     }
 

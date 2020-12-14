@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Floor;
+use App\Models\Material;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class FloorFactory extends Factory
@@ -25,7 +26,7 @@ class FloorFactory extends Factory
             'screed_mix_volume' => $this->faker->numberBetween(1, 100),
             'material_count' => $this->faker->numberBetween(1, 100),
             'glue_amount' => $this->faker->numberBetween(1, 100),
-            'material_type' => $this->faker->word(),
+            'material' => Material::all()->random()->id,
         ];
     }
 }

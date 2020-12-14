@@ -16,8 +16,8 @@ class CreateCeilingsTable extends Migration
         Schema::create('ceilings', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
             $table->double('material_count');
-            $table->integer('material_type');
-            $table->foreign('material_type')->references('id')->on('materials');
+            $table->integer('material');
+            $table->foreign('material')->references('id')->on('materials');
         });
     }
 

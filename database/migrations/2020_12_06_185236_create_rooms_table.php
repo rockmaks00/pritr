@@ -17,8 +17,10 @@ class CreateRoomsTable extends Migration
             $table->integer('id')->autoIncrement();
             $table->integer('project_id');
             $table->foreign('project_id')->references('id')->on('projects');
-            $table->string('name');
-            $table->foreign('name')->references('name')->on('projects');
+            $table->string('room_name');
+            $table->double('length');
+            $table->double('width');
+            $table->double('height');
             $table->integer('floor_id');
             $table->foreign('floor_id')->references('id')->on('floors');
             $table->integer('wall_id');

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Ceiling;
+use App\Models\Material;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CeilingFactory extends Factory
@@ -12,7 +13,7 @@ class CeilingFactory extends Factory
     {
         return [
             'material_count' => $this->faker->numberBetween(1, 100),
-            'material_type' => $this->faker->word(),
+            'material' => Material::all()->random()->id,
         ];
     }
 }

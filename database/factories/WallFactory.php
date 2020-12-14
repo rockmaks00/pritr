@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Material;
 use App\Models\Wall;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -25,8 +26,7 @@ class WallFactory extends Factory
             'plaster_weight' => $this->faker->numberBetween(1, 100),
             'primer_amount' => $this->faker->numberBetween(1, 100),
             'material_count' => $this->faker->numberBetween(1, 100),
-            'glue_amount' => $this->faker->numberBetween(1, 100),
-            'material_type' => $this->faker->word(),
+            'material' => Material::all()->random()->id,
         ];
     }
 }

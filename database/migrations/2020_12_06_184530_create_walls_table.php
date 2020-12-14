@@ -18,8 +18,8 @@ class CreateWallsTable extends Migration
             $table->double('plaster_weight');
             $table->double('primer_amount');
             $table->double('material_count');
-            $table->integer('material_type');
-            $table->foreign('material_type')->references('id')->on('materials');
+            $table->integer('material');
+            $table->foreign('material')->references('id')->on('materials');
         });
     }
 

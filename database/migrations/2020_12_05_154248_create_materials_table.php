@@ -18,7 +18,7 @@ class CreateMaterialsTable extends Migration
             $table->string('material');
             $table->double('length')->nullable();
             $table->double('width')->nullable();
-            $table->double('square')->nullable();
+            //$table->double('square')->nullable();
             $table->double('weight')->nullable();
             $table->double('price');
         });

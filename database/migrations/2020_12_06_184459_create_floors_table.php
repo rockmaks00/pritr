@@ -18,8 +18,8 @@ class CreateFloorsTable extends Migration
             $table->double('screed_mix_volume');
             $table->double('material_count');
             $table->double('glue_amount');
-            $table->integer('material_type');
-            $table->foreign('material_type')->references('id')->on('materials');
+            $table->integer('material');
+            $table->foreign('material')->references('id')->on('materials');
         });
     }
 

@@ -23,7 +23,10 @@ class RoomFactory extends Factory
     {
         return [
             'project_id' => (new ProjectFactory())->createOne()->id,
-            'name' => $this->faker->word(),
+            'room_name' => $this->faker->word(),
+            'length' => $this->faker->numberBetween(2, 10),
+            'width' => $this->faker->numberBetween(2, 10),
+            'height' => $this->faker->numberBetween(2, 4),
             'floor_id' => (new FloorFactory())->createOne()->id,
             'wall_id' => (new WallFactory())->createOne()->id,
             'ceiling_id' => (new CeilingFactory())->createOne()->id,
