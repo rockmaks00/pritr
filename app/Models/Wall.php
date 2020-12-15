@@ -9,4 +9,7 @@ class Wall extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    public function room() {
+        return $this->belongsTo('App\Room');
+    }
 }

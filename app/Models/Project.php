@@ -9,4 +9,11 @@ class Project extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
+    public function room()
+    {
+        return $this->hasMany('App\Room');
+    }
 }
